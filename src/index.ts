@@ -6,6 +6,9 @@ config({ path: '.env.local' });
 const app: Application = express();
 const port = 3001;
 
+// Body Parser
+app.use(express.json());
+
 
 app.get("/", (_: Request, res: Response): Response => {
     return res.status(200).send({
